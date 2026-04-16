@@ -25,7 +25,7 @@ The design was created using **Verilog HDL**, relying on behavioral modeling tec
 * **Hardware Description Language:** Verilog HDL
 * **Simulation & Synthesis:** Xilinx Vivado Design Suite
 
-## 📋 Supported Operations
+##  Supported Operations
 
 Below is the complete operation code (Opcode) table mapping the 4-bit `ALU_sel` input to its corresponding behavior, exactly as implemented in the Verilog module.
 

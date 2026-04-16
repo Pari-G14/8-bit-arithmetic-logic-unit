@@ -25,7 +25,7 @@ The design was created using **Verilog HDL**, relying on behavioral modeling tec
 * **Hardware Description Language:** Verilog HDL
 * **Simulation & Synthesis:** Xilinx Vivado Design Suite
 
-##  Supported Operations
+## 📋 Supported Operations
 
 Below is the complete operation code (Opcode) table mapping the 4-bit `ALU_sel` input to its corresponding behavior, exactly as implemented in the Verilog module.
 
@@ -33,5 +33,31 @@ Below is the complete operation code (Opcode) table mapping the 4-bit `ALU_sel` 
 | :---: | :--- | :--- |
 | `0000` | Addition | `a + b` |
 | `0001` | Subtraction | `a - b` |
-| `0010` | Multiplication | `(
+| `0010` | Multiplication | `(a * b)` *(Outputs lower 8 bits)* |
+| `0011` | Division | `a / b` *(Outputs 0 if b = 0)* |
+| `0100` | Logical Shift Left | `a << 1` |
+| `0101` | Logical Shift Right | `a >> 1` |
+| `0110` | Rotate Left | Shifts `a` left, MSB wraps to LSB |
+| `0111` | Rotate Right | Shifts `a` right, LSB wraps to MSB |
+| `1000` | Bitwise AND | `a & b` |
+| `1001` | Bitwise OR | `a \| b` |
+| `1010` | Bitwise XOR | `a ^ b` |
+| `1011` | Bitwise NOR | `~(a \| b)` |
+| `1100` | Bitwise NAND | `~(a & b)` |
+| `1101` | Bitwise XNOR | `~(a ^ b)` |
+| `1110` | Greater Than | Returns `1` if `a > b`, else `0` |
+| `1111` | Equality | Returns `1` if `a == b`, else `0` |
 
+##  Getting Started
+
+To simulate and synthesize this project on your local machine, follow these steps:
+
+### Prerequisites
+* Install **Xilinx Vivado** (WebPACK/Lab Edition is sufficient).
+* Git installed on your local machine.
+
+### Installation & Simulation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YourUsername/8bit-ALU-Verilog.git](https://github.com/YourUsername/8bit-ALU-Verilog.git)
